@@ -1,4 +1,4 @@
-LibraryList = []
+LibraryList = {}
 borrowedBooks = []
 
 class Book:
