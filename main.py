@@ -23,7 +23,7 @@ class Book:
             return "The book has been returned."
     
     def display_book_info(self):
-        return f"Title: {self.title}\nAuthor: {self.author}\nPublication Year: {self.publication_year}\nBorrowed: {' Yes' if self.isBorrowed else ' No'}"
+        return f"   Title: {self.title}\n   Author: {self.author}\n   Publication Year: {self.publication_year}\n   Borrowed: {' Yes' if self.isBorrowed else ' No'}"
     
 
 class Library:
@@ -56,7 +56,7 @@ class Library:
         if len(LibraryList):
             count = 1
             for i in LibraryList:
-                print(f'{count}. {i.display_book_info()}')
+                print(f'{count} - \n{i.display_book_info()}')
                 count += 1
         else:
             print('No books in the library')
@@ -111,7 +111,7 @@ class Library:
         if len(borrowedBooks):
             count = 1
             for i in borrowedBooks:
-                print(f'{count}. {i.display_book_info()}')
+                print(f'{count} - \n{i.display_book_info()}')
                 count += 1
         else:
             print('No borrowed books')
@@ -121,13 +121,12 @@ def mainMenu():
     while True:
         print('Library Management System')
         print('-------------------------')
-        print()
-        print('1 - add book')
-        print('2 - view books')
-        print('3 - borrow book')
-        print('4 - return book')
-        print('5 - view borrowed books')
-        print('6 - exit')
+        print('     1 - add book')
+        print('     2 - view books')
+        print('     3 - borrow book')
+        print('     4 - return book')
+        print('     5 - view borrowed books')
+        print('     6 - exit')
         choice = input('Enter your choice : ')
         while True:
             try:
